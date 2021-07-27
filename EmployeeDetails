@@ -32,7 +32,7 @@ public class EmployeeDetails {
 	public static void main(String[] args) {
 		ArrayList<Employee> list1=new ArrayList<Employee>();
                 Address ad=new Address(1,"Area1","Street1","State1");
-		Employee e=new Employee(1,"Arjun","0123456789");
+		Employee e=new Employee(1,"Arjun","0123456789",ad);
 		list1.add(e);
 		
 		Iterator iter1=list1.iterator();
