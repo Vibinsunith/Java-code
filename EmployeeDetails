@@ -7,10 +7,12 @@ class Employee{
 	int id;
 	String name;
 	String phoneNumber;
-	Employee(int id,String name,String phoneNumber){
+        Address address;
+	Employee(int id,String name,String phoneNumber,Address address){
 		this.id=id;
 		this.name=name;
 		this.phoneNumber=phoneNumber;
+                this.address=address;
 	}
 }
 class Address{
@@ -29,6 +31,7 @@ public class EmployeeDetails {
 
 	public static void main(String[] args) {
 		ArrayList<Employee> list1=new ArrayList<Employee>();
+                Address ad=new Address(1,"Area1","Street1","State1");
 		Employee e=new Employee(1,"Arjun","0123456789");
 		list1.add(e);
 		
@@ -39,9 +42,7 @@ public class EmployeeDetails {
 			System.out.println("Id:"+em.id+"| "+"Name:"+em.name+" |"+"Phone Number:"+em.phoneNumber);
 				
 		ArrayList <Address> list2=new ArrayList <Address>();
-		Address ad=new Address(1,"Area1","Street1","State1");
 		list2.add(ad);
-		
 		Iterator iter2=list2.iterator();
 		while(iter2.hasNext()) {
 			
