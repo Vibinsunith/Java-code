@@ -1,0 +1,61 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+
+
+class Employee{
+	int id;
+	String name;
+	String phoneNumber;
+	Employee(int id,String name,String phoneNumber){
+		this.id=id;
+		this.name=name;
+		this.phoneNumber=phoneNumber;
+	}
+}
+class Address{
+	int houseNumber;
+	String area;
+	String street;
+	String state;
+	Address(int houseNumber,String area,String street,String state){
+		this.houseNumber=houseNumber;
+		this.area=area;
+		this.street=street;
+		this.state=state;
+	}
+}
+public class EmployeeDetails {
+
+	public static void main(String[] args) {
+		ArrayList<Employee> list1=new ArrayList<Employee>();
+		Employee e=new Employee(1,"Arjun","0123456789");
+		list1.add(e);
+		
+		Iterator iter1=list1.iterator();
+		while(iter1.hasNext()) {
+			System.out.println("EMPLOYEE DETAILS");
+			Employee em=(Employee)iter1.next();
+			System.out.println("Id:"+em.id+"| "+"Name:"+em.name+" |"+"Phone Number:"+em.phoneNumber);
+				
+		ArrayList <Address> list2=new ArrayList <Address>();
+		Address ad=new Address(1,"Area1","Street1","State1");
+		list2.add(ad);
+		
+		Iterator iter2=list2.iterator();
+		while(iter2.hasNext()) {
+			
+			Address addr=(Address)iter2.next();
+			System.out.println("| Address: "+"House Number:"+addr.houseNumber+" |"+"Area Name:"+addr.area+" |"+"Street Name:"+addr.street+" |"+"State Name:"+addr.state);
+		
+			
+		}
+		
+
+		
+		
+
+	}
+
+}
+}
