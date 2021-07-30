@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class HashString {
+
+	public static void main(String[] args) {
+		String str="vibinvibinvibin";
+		String[] namesArray=null;
+		namesArray=str.split("");
+		System.out.println(Arrays.toString(namesArray));
+		Map<String,Integer> map=new HashMap<>();
+		for(int i=0;i<namesArray.length;i++) {
+			if(!map.containsKey(namesArray[i])) {
+				map.put(namesArray[i], 1);
+				
+			}else {
+				map.put(namesArray[i], map.get(namesArray[i])+1);
+				
+			}
+		}
+		for(Map.Entry<String, Integer> output:map.entrySet()) {
+			System.out.println(output.getKey()+" -"+output.getValue());
+		}
+
+	}
+
+}
